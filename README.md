@@ -9,10 +9,3 @@
 2.css
 3.java Script
 
-## The Team
-
-- `DINESH V`
-- `LIKITH`
-- `LAKSHMAN JI`
-- `GOWD`
-
