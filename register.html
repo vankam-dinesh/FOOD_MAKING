@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register | Food Recipe</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('https://images.pexels.com/photos/691114/pexels-photo-691114.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .register-container {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 2rem 3rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #27ae60;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input {
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #27ae60;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #1e8449;
+    }
+
+    p {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    a {
+      color: #27ae60;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="register-container">
+    <h2>📝 Register</h2>
+    <form id="registerForm">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required />
+
+      <button type="submit">Register</button>
+    </form>
+    <p>Already have an account? <a href="login.html">Login here</a></p>
+  </div>
+
+  <script>
+    document.getElementById('registerForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      const user = { email, password };
+
+      localStorage.setItem('user', JSON.stringify(user));
+      alert('Registration successful! Please login.');
+      window.location.href = 'login.html';
+    });
+  </script>
+</body>
+</html>
