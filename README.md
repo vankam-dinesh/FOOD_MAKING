@@ -17,7 +17,7 @@ Each recipe comes with:
 ✔️ Ingredients list
 ✔️ Step-by-step cooking instructions
 ✔️ Preparation & cooking time
-✔️ Nutritional information (optional)
+✔️ Nutritional information (optional) 
 ✔️ Embedded video tutorials (if available)
 
 ✨ Key Features
